@@ -25,13 +25,13 @@ namespace Gengine
                 if (g1.alleleA.dominance >= g2.alleleB.dominance)
                     offspring = new Gene<T>(g1.alleleA, g2.alleleB);
                 else
-                    offspring = new Gene<T>(g2.alleleA, g1.alleleB);
+                    offspring = new Gene<T>(g2.alleleB, g1.alleleA);
 
             else if (randomNumber == 3)
                 if (g1.alleleB.dominance >= g2.alleleA.dominance)
                     offspring = new Gene<T>(g1.alleleB, g2.alleleA);
                 else
-                    offspring = new Gene<T>(g2.alleleB, g1.alleleA);
+                    offspring = new Gene<T>(g2.alleleA, g1.alleleB);
 
             else
                 if (g1.alleleB.dominance >= g2.alleleB.dominance)
