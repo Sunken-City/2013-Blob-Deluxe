@@ -1,1 +1,6 @@
 C:\Users\Anthony\Documents\GitHub\2013-Blob-Deluxe\VS Mockups\Gengine\Gengine\bin\Debug\Gengine.exe.config
+C:\Users\Anthony\Documents\GitHub\2013-Blob-Deluxe\VS Mockups\Gengine\Gengine\bin\Debug\Gengine.exe
+C:\Users\Anthony\Documents\GitHub\2013-Blob-Deluxe\VS Mockups\Gengine\Gengine\bin\Debug\Gengine.pdb
+C:\Users\Anthony\Documents\GitHub\2013-Blob-Deluxe\VS Mockups\Gengine\Gengine\obj\Debug\Gengine.csprojResolveAssemblyReference.cache
+C:\Users\Anthony\Documents\GitHub\2013-Blob-Deluxe\VS Mockups\Gengine\Gengine\obj\Debug\Gengine.exe
+C:\Users\Anthony\Documents\GitHub\2013-Blob-Deluxe\VS Mockups\Gengine\Gengine\obj\Debug\Gengine.pdb

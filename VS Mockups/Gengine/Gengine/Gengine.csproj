@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Allele.cs" />
+    <Compile Include="Blob.cs" />
+    <Compile Include="Gene.cs" />
+    <Compile Include="MainController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Punnett.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
