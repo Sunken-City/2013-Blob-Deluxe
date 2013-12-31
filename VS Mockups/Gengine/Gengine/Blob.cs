@@ -6,15 +6,37 @@ using System.Threading.Tasks;
 
 namespace Gengine
 {
-    class Blob
+    public class Blob
     {
-        Gene<char> gene;
+        public enum Gender { Male, Female }
+        public int gender;
+        public int numGenes = 0;
+
+        private Dictionary<string, object> DNA = new Dictionary<string, object>();
+
 
         public Blob(Gene<char> input)
         {
-            gene = input;
+            addGene<char>(input);
+        }
+
+        public Blob()
+        {
+            gender = 1;
+        }
+
+        public void addGene<T>(Gene<T> gene)
+        {
+            DNA.Add(gene.name, gene);
+            numGenes++;
+        }
+
+        public Gene<T> getGene<T>(string name)
+        {
+            return DNA[name] as Gene<T>;
         }
     }
+
 }
 /*Gender :: (Male or Female)
 
