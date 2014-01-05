@@ -59,4 +59,28 @@ public class Blob : MonoBehaviour {
 	{
 		return DNA[name] as Gene<T>;
 	}
+	
+	//Method that determines what to do with the two color alleles. Should there be codominance?
+	public void setColor()
+	{
+		Gene<LABColor> gene = this.getGene<LABColor>("Color");
+		
+		//Codominance: Linear interpolation of both colors
+		if (gene.alleleA.dominance == gene.alleleB.dominance)
+		{
+			this.color = LABColor.Lerp(gene.alleleA.value, gene.alleleB.value, 0.5f);
+			return;
+		}
+		//Dominance: One attribute masks the other
+		else if (gene.alleleA.dominance > gene.alleleB.dominance)
+		{
+			this.color = gene.alleleA.value;
+		}
+		
+		else
+		{
+			this.color = gene.alleleB.value;
+		}
+		
+	}
 }

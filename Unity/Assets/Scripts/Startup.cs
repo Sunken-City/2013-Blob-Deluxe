@@ -35,8 +35,8 @@ public class Startup : MonoBehaviour {
 		mom.GetComponent<SpriteRenderer>().color = c1.ToColor();
 		dad.GetComponent<SpriteRenderer>().color = c2.ToColor();
 		
-		mom.GetComponent<Blob>().addGene<LABColor>("Color", c1, c3);
-		dad.GetComponent<Blob>().addGene<LABColor>("Color", c2, c4);
+		mom.GetComponent<Blob>().addGene<LABColor>("Color", c1, 0, c3, 0);
+		dad.GetComponent<Blob>().addGene<LABColor>("Color", c2, 0, c4, 0);
 		
 		child = Punnett.cross(mom.GetComponent<Blob>(), dad.GetComponent<Blob>());
 		child.transform.position = new Vector2(0, transform.position.y);

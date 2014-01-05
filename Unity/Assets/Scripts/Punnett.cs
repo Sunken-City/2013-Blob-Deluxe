@@ -64,9 +64,7 @@ namespace Gengine
 			if (mom.numGenes == dad.numGenes)
             {
 				offspring.GetComponent<Blob>().addGene<LABColor>(cross<LABColor>(mom.getGene<LABColor>("Color"), dad.getGene<LABColor>("Color")));
-				offspring.GetComponent<Blob>().color = LABColor.Lerp(offspring.GetComponent<Blob>().getGene<LABColor>("Color").alleleA.value,
-				                                                     offspring.GetComponent<Blob>().getGene<LABColor>("Color").alleleB.value, 
-				                                                     0.5f);
+				offspring.GetComponent<Blob>().setColor();
                 return offspring;
             }
 
