@@ -21,8 +21,8 @@ public class Startup : MonoBehaviour {
 		mom.transform.eulerAngles = new Vector2(0, 180);
 		
 		//Make the Mom red and the Dad green
-		LABColor c1 = new LABColor(Color.blue);
-		LABColor c2 = new LABColor(Color.white);
+		LABColor c1 = new LABColor(Color.black);
+		LABColor c2 = new LABColor(Color.green);
 		mom.GetComponent<SpriteRenderer>().color = c1.ToColor();
 		dad.GetComponent<SpriteRenderer>().color = c2.ToColor();
 		

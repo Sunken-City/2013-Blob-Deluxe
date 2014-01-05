@@ -46,7 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Blob.cs" />
+     <Compile Include="Assets\Scripts\Blob.cs" />
+     <Compile Include="Assets\Scripts\LABColor.cs" />
+     <Compile Include="Assets\Scripts\Punnett.cs" />
+     <Compile Include="Assets\Scripts\Startup.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
