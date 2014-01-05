@@ -9,7 +9,13 @@ namespace Gengine
 	public class Punnett : MonoBehaviour
 	{
 	
-        public static System.Random random = new System.Random();
+		public static System.Random random;
+		
+		void Awake()
+		{
+			DontDestroyOnLoad(this);
+			random = new System.Random();
+		}
 
         public static Gene<T> cross<T>(Gene<T> g1, Gene<T> g2)
         {
@@ -49,14 +55,18 @@ namespace Gengine
             return offspring;
         }
 
-        public static Blob cross(Blob mom, Blob dad)
+		//This one is hard coded for the time being. Still thinking of a dynamic solution.
+        public static GameObject cross(Blob mom, Blob dad)
         {
 
-            Blob offspring = new Blob();
-
-            if (mom.numGenes == dad.numGenes)
+			GameObject offspring = (GameObject)Instantiate(Resources.Load("Blob"));
+			                                         
+			if (mom.numGenes == dad.numGenes)
             {
-                offspring.addGene<char>(cross<char>(mom.getGene<char>("Example"), dad.getGene<char>("Example")));
+				offspring.GetComponent<Blob>().addGene<LABColor>(cross<LABColor>(mom.getGene<LABColor>("Color"), dad.getGene<LABColor>("Color")));
+				offspring.GetComponent<Blob>().color = LABColor.Lerp(offspring.GetComponent<Blob>().getGene<LABColor>("Color").alleleA.value,
+				                                                     offspring.GetComponent<Blob>().getGene<LABColor>("Color").alleleB.value, 
+				                                                     0.5f);
                 return offspring;
             }
 
